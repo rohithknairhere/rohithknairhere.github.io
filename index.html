@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohith K Nair — AI & Data Science</title>
+    <meta name="description" content="Rohith K Nair — B.Tech Artificial Intelligence & Data Science student at Amrita Vishwa Vidyapeetham. Builder of AI tools and web apps." />
+    <meta name="theme-color" content="#0A0B0E" />
+    <meta property="og:title" content="Rohith K Nair — AI & Data Science" />
+    <meta property="og:description" content="AI & Data Science student, builder, student representative." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Set the theme before first paint so there is no flash.
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+          var theme = saved || (prefersLight ? "light" : "dark");
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
