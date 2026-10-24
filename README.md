@@ -6,11 +6,11 @@ Personal site built with Vite, React, TypeScript, Tailwind CSS and Framer Motion
 
 All text lives in **`src/data/content.ts`**. Search it for `PLACEHOLDER` to find what still needs filling in:
 
-- `public/resume.pdf`: replace with your real resume (keep the file name).
 - `projects[].github`: add repo links (an empty string hides the link).
 - `projects[].details`: 2–3 bullet points per project for the pop-up (empty shows "More detail coming soon").
 - `leadership[].period`: add dates if you want them shown.
-- `contact.blurb`: the line above your email.
+
+The site's content mirrors `public/resume.pdf`. When you update your resume, replace that file (keep the name) and update `content.ts` to match.
 
 ## Run locally
 

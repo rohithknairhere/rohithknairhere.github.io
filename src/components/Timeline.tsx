@@ -13,7 +13,7 @@ export function Timeline() {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 24 });
 
   return (
-    <Section id="leadership" index="03" title="Leadership & Volunteering">
+    <Section id="leadership" index="03" title="Leadership">
       <ol ref={listRef} className="relative ml-1.5 max-w-3xl">
         {/* Track + accent line that fills as you scroll */}
         <span aria-hidden="true" className="absolute left-0 top-2 bottom-2 w-px bg-line" />

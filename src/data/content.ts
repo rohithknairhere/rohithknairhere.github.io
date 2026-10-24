@@ -1,6 +1,6 @@
 /**
  * All site text lives here. Edit this file to change what the site says —
- * no component changes needed.
+ * no component changes needed. Content mirrors the resume in public/resume.pdf.
  *
  * Anything marked PLACEHOLDER is waiting for you to fill in.
  */
@@ -8,10 +8,9 @@
 export const site = {
   name: "Rohith K Nair",
   initials: "RKN",
-  location: "Faridabad, Haryana, India",
+  location: "Faridabad, Haryana",
   email: "rohithkrishnan431@gmail.com",
-  // The file lives at public/resume.pdf.
-  // PLACEHOLDER: replace public/resume.pdf with your real resume (keep the same name).
+  // The file lives at public/resume.pdf. To update it, replace that file (keep the name).
   resumeFile: "resume.pdf",
   taglines: ["AI & Data Science student", "Builder", "Student Representative"],
   socials: {
@@ -22,21 +21,29 @@ export const site = {
 
 export const about = {
   paragraph:
-    "B.Tech Artificial Intelligence & Data Science student at Amrita Vishwa Vidyapeetham, School of Artificial Intelligence (Faridabad), graduating 2029. I build AI tools and web apps, simulate systems in MATLAB, and enjoy teaching and leading teams.",
+    "B.Tech Artificial Intelligence & Data Science student with hands-on experience building AI chatbots and web applications for a hospital, simulation models in MATLAB, and data-structure-driven systems in Python.",
+  interests: [
+    { area: "FinTech", detail: "High-frequency trading and low-latency market systems" },
+    { area: "Defence", detail: "Autonomous drones and AI for defence systems" },
+    {
+      area: "Cybersecurity",
+      detail: "Defence cyber operations, AI-driven threat detection and intrusion detection",
+    },
+  ],
   education: [
     {
       school: "Amrita Vishwa Vidyapeetham",
-      detail: "B.Tech AI & Data Science",
-      period: "2025–2029 (expected)",
+      detail: "B.Tech in Artificial Intelligence and Data Science (Semester III), School of Artificial Intelligence, Delhi NCR",
+      period: "2025 – 2029",
     },
     {
       school: "Naipunya Public School, Kochi",
-      detail: "Class XII (CBSE)",
+      detail: "Class XII, CBSE",
       period: "",
     },
     {
-      school: "Presidency School, Bangalore North",
-      detail: "Class X",
+      school: "Presidency School Bangalore North, Bengaluru",
+      detail: "Class X, CBSE",
       period: "",
     },
   ],
@@ -61,7 +68,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Financial Audit Chatbot",
-    description: "AI chatbot assisting financial audit queries for Amrita Hospital, Delhi NCR.",
+    description:
+      "Built an AI chatbot to assist with finding revenue leakage and optimizing financial audits for the hospital.",
     tags: ["AI", "Python"],
     context: "Amrita Hospital, Delhi NCR",
     github: "",
@@ -69,8 +77,7 @@ export const projects: Project[] = [
   },
   {
     title: "Hospital Management Web Apps",
-    description:
-      "Three web apps (hostel, employee and vehicle management) for Amrita Hospital, Delhi NCR.",
+    description: "Developed three web applications for hostel, employee and vehicle management.",
     tags: ["Web Development"],
     context: "Amrita Hospital, Delhi NCR",
     github: "",
@@ -78,17 +85,17 @@ export const projects: Project[] = [
   },
   {
     title: "HackerHouse Hackathon",
-    description: "Team project placed in the top 25 teams in India.",
-    tags: ["Hackathon"],
-    context: "HackerHouse Hackathon",
+    description: "Placed among the top 25 teams in India.",
+    tags: ["Team Project"],
+    context: "",
     github: "",
     details: [],
   },
   {
     title: "High-Frequency Market-Making Simulation",
     description:
-      "Modelled and simulated a market-making strategy and analysed its performance under execution latency.",
-    tags: ["MATLAB", "Simulation"],
+      "Modeled and simulated a high-frequency market-making strategy and analysed its performance under execution latency.",
+    tags: ["MATLAB", "Modeling & Simulation"],
     context: "",
     github: "",
     details: [],
@@ -96,16 +103,17 @@ export const projects: Project[] = [
   {
     title: "Rural Healthcare Worker & Medicine Supply Chain Tracker",
     description:
-      "AVL trees for fast record lookup and a min-heap to prioritise medicine supply.",
-    tags: ["Python", "AVL Tree", "Min-Heap"],
+      "Built a tracker that uses AVL trees for fast record lookup and a min-heap to prioritise medicine supply.",
+    tags: ["Python", "AVL Trees", "Min-Heap"],
     context: "",
     github: "",
     details: [],
   },
   {
     title: "Adaptive Noise-Aware Signal Detection",
-    description: "Adaptive detection using CFAR thresholding in varying noise.",
-    tags: ["Signal Processing", "CFAR"],
+    description:
+      "Team project on adaptive signal detection using Constant False Alarm Rate (CFAR) thresholding in varying noise.",
+    tags: ["CFAR", "Signal Processing"],
     context: "",
     github: "",
     details: [],
@@ -134,14 +142,8 @@ export const leadership: TimelineItem[] = [
     period: "",
   },
   {
-    role: "Volunteer Tutor",
-    org: "8 months",
-    note: "Taught underprivileged students aged 7–16.",
-    period: "",
-  },
-  {
     role: "Head Boy (Class X) & Associate Head Boy (Class IX)",
-    org: "Presidency School, Bangalore North",
+    org: "Presidency School Bangalore North",
     note: "",
     period: "",
   },
@@ -153,10 +155,14 @@ export const leadership: TimelineItem[] = [
   },
 ];
 
-export const skills: { group: string; items: string[] }[] = [
-  { group: "Programming", items: ["Python", "C", "MATLAB", "Java", "HTML"] },
+/**
+ * `assisted` items are shown with a dashed outline and an "AI-assisted" note,
+ * matching how the resume lists them.
+ */
+export const skills: { group: string; items: string[]; assisted?: string[] }[] = [
+  { group: "Programming", items: ["Python", "C", "MATLAB"], assisted: ["Java", "HTML"] },
   {
-    group: "Areas",
+    group: "Core Areas",
     items: [
       "Machine Learning",
       "Data Structures & Algorithms",
@@ -170,9 +176,7 @@ export const skills: { group: string; items: string[] }[] = [
 ];
 
 export const contact = {
-  // PLACEHOLDER: edit this line so it says what you're actually open to.
-  blurb:
-    "Open to internships, collaborations and conversations about AI, data and building things. The quickest way to reach me is email.",
+  blurb: "The quickest way to reach me is email.",
 };
 
 export const nav = [
