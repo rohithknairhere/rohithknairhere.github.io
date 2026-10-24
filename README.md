@@ -2,6 +2,8 @@
 
 Personal site built with Vite, React, TypeScript, Tailwind CSS and Framer Motion. Fully static: no backend.
 
+https://rohithknairhere.github.io/
+
 ## Editing content
 
 All text lives in **`src/data/content.ts`**. Search it for `PLACEHOLDER` to find what still needs filling in:
