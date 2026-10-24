@@ -84,8 +84,8 @@ export const projects: Project[] = [
     details: [],
   },
   {
-    title: "HackerHouse Hackathon",
-    description: "Placed among the top 25 teams in India.",
+    title: "HackerHouse Goa Hackathon",
+    description: "Placed among the top 25 teams in India in Task 4.",
     tags: ["Team Project"],
     context: "",
     github: "",
